@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <table class="table table-border table-bordered text-center shadow">
+            <tr>
+                <th>User id</th>
+                <th>Task</th>
+                <!-- <th>User email</th>
+                <th>User password</th> -->
+                <th>User Delete</th>
+                <th>User Update</th>
+            </tr>
+
+            <% users.forEach(function(user){ %>
+            <tr>
+                <td><%=user._id %></td>
+                <td><%=user.name %></td>
+                <!-- <td><%=user.email %></td>
+                <td><%=user.password %></td> -->
+                <td><a href="/delete/<%=user._id %>" class="btn btn-danger">delete</a></td>
+                <td><a href="/edit/<%=user._id %>" class="btn btn-success">Edit</a></td>
+            </tr>
+            <%  }) %>
+        </table>
+    </div>
+    
+</body>
+</html>
