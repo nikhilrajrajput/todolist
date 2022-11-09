@@ -26,8 +26,7 @@ app.get('/', function(req,res) {
 app.post('/insert', function(req,res){
     var user = new User({
         name: req.body.name,
-        // email: req.body.email,
-        // password: req.body.password
+       
     })
 
     user.save(()=>{
